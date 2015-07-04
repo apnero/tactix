@@ -567,3 +567,10 @@ sub, sup {
 .peFlareLightbox {
 	z-index: 99999 !important;
 }
+
+
+
+#gmap {
+	height:458px;
+	margin-bottom: 27px;
+}
