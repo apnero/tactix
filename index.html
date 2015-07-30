@@ -895,7 +895,7 @@ Saturday</br>Box 'n Burn – 9:00am</br>
 			</div>
 
 			
-				<p class="medium thin"> For more info or to message FightTactix <a href="mailto:mike@allgoodfactory.com">click here</a> or fill out the form below.
+				<p class="medium thin"> For more info or to message FightTactix <a href="mailto:fighttactix@gmail.com">click here</a> or fill out the form below.
 			 
 			
 		</div>
@@ -919,12 +919,13 @@ Saturday</br>Box 'n Burn – 9:00am</br>
 
 	<div class="row">
 
-		<form method="post" name="contactform" class="peThemeContactForm" id="contactform">
+		<form action="/getFormData" method="post" name="contactform"  id="contactform">
+		<!-- <form action="/getFormData" method="post" class="contact-form" role="form"> -->
 			<fieldset>
 				<div class="six columns">
 
 					<label for="name" accesskey="U"><i class="fa fa-user"></i></label>
-					<input name="author" type="text" id="name" size="30" value="" />
+					<input name="name" type="text" id="name" size="30" value="" />
 
 					<label for="email" accesskey="E"><i class="fa fa-envelope-o"></i></label>
 					<input name="email" type="text" id="email" size="30" value="" />
@@ -948,6 +949,7 @@ Saturday</br>Box 'n Burn – 9:00am</br>
 		</form>
 	</div>
 </section>
+
 
 
 	<!-- The footer -->
@@ -975,6 +977,10 @@ Saturday</br>Box 'n Burn – 9:00am</br>
 
 			</div>
 		</div>
+
+
+
+
 	</section>
 
 
@@ -982,15 +988,34 @@ Saturday</br>Box 'n Burn – 9:00am</br>
 							
 <script type='text/javascript'>
 /* <![CDATA[ */
-var peThemeOptions = {"import_demo":"default","logo":"http:\/\/magnum.themes.tf\/wp-content\/uploads\/sites\/6\/2014\/01\/magnum-logo-color-small.png","siteTitle":"Magnum","favicon":"http:\/\/magnum.themes.tf\/wp-content\/themes\/magnum\/favicon.png","customCSS":"","customJS":"","contactEmail":"","contactSubject":"Contact Form Message","sidebars":null,"footerTitle":"The Social Stuff","footerCopyright":"Magnum\u2122 by <a href=\"http:\/\/themeforest.net\/user\/bitfade\" target=\"blank\" class=\"underline\">bitfade<\/a><br>\u2014 Made with <i class=\"fa fa-heart text-color\"><\/i> on The Moon \u2014","footerSocialLinks":[{"icon":"fa fa-twitter|Twitter","url":"#"},{"icon":"fa fa-facebook|Facebook","url":"#"},{"icon":"fa fa-dribbble|Dribbble","url":"#"}],"footer_type":"normal","projectsGallery":"-1","fontBody":"Open Sans","fontBody_custom":"","fontSecondary":"Montserrat","fontSecondary_custom":"","fontTertiary":"Volkhov","fontTertiary_custom":"","color1":"#bba454","minifyJS":"yes","minifyCSS":"yes","adminThumbs":"yes","updateCheck":"0","updateUsername":"","updateAPIKey":"","adminLogo":"http:\/\/magnum.themes.tf\/wp-content\/themes\/magnum\/framework\/images\/framework_logo.png","adminUrl":"http:\/\/pixelentity.com"};
-var peContactForm = {"url":"http%3A%2F%2Fmagnum.themes.tf%2Fwp-admin%2Fadmin-ajax.php"};
-var peNewsletter = {"url":"http%3A%2F%2Fmagnum.themes.tf%2Fwp-admin%2Fadmin-ajax.php"};
-var _magnum = {"ajax-loading":"http:\/\/magnum.themes.tf\/wp-content\/themes\/magnum\/images\/ajax-loader.gif","home_url":"http:\/\/magnum.themes.tf\/"};
+// var peThemeOptions = {"import_demo":"default","logo":"http:\/\/magnum.themes.tf\/wp-content\/uploads\/sites\/6\/2014\/01\/magnum-logo-color-small.png","siteTitle":"Magnum","favicon":"http:\/\/magnum.themes.tf\/wp-content\/themes\/magnum\/favicon.png","customCSS":"","customJS":"","contactEmail":"","contactSubject":"Contact Form Message","sidebars":null,"footerTitle":"The Social Stuff","footerCopyright":"Magnum\u2122 by <a href=\"http:\/\/themeforest.net\/user\/bitfade\" target=\"blank\" class=\"underline\">bitfade<\/a><br>\u2014 Made with <i class=\"fa fa-heart text-color\"><\/i> on The Moon \u2014","footerSocialLinks":[{"icon":"fa fa-twitter|Twitter","url":"#"},{"icon":"fa fa-facebook|Facebook","url":"#"},{"icon":"fa fa-dribbble|Dribbble","url":"#"}],"footer_type":"normal","projectsGallery":"-1","fontBody":"Open Sans","fontBody_custom":"","fontSecondary":"Montserrat","fontSecondary_custom":"","fontTertiary":"Volkhov","fontTertiary_custom":"","color1":"#bba454","minifyJS":"yes","minifyCSS":"yes","adminThumbs":"yes","updateCheck":"0","updateUsername":"","updateAPIKey":"","adminLogo":"http:\/\/magnum.themes.tf\/wp-content\/themes\/magnum\/framework\/images\/framework_logo.png","adminUrl":"http:\/\/pixelentity.com"};
+// var peContactForm = {"url":"http%3A%2F%2Fmagnum.themes.tf%2Fwp-admin%2Fadmin-ajax.php"};
+// var peNewsletter = {"url":"http%3A%2F%2Fmagnum.themes.tf%2Fwp-admin%2Fadmin-ajax.php"};
+// var _magnum = {"ajax-loading":"http:\/\/magnum.themes.tf\/wp-content\/themes\/magnum\/images\/ajax-loader.gif","home_url":"http:\/\/magnum.themes.tf\/"};
 /* ]]> */
 </script>
+   <!--  // <script src="js/bootstrap.min.js"></script> -->
 <script type='text/javascript' src='js/theme.min.js'></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
   	<script type="text/javascript" src="js/gmaps.js"></script>
   	<script type="text/javascript" src="js/main.js"></script>
+
+
+ 	    <script>
+            $("form").submit(function(e) {
+                e.preventDefault(); // Prevents the page from refreshing
+                var $this = $(this); // `this` refers to the current form element
+                $.post(
+                    $this.attr("action"), // Gets the URL to sent the post to
+                    $this.serialize(), // Serializes form data in standard format
+                    function(data) { /** code to handle response **/ },
+                    "json" // The format the response should be in
+                );
+                // $('#confirmEmailDialog').modal('toggle')
+                alert("Your message has been sent.  Thank you.");
+            });
+    </script>
+
+
 </body>
 </html>

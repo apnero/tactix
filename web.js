@@ -13,7 +13,7 @@ app.post('/getFormData', function(req, res) {
     "From": "email@plasmascape.com",
     "To": "fighttactix@gmail.com",
     "Subject": "EMAIL FROM FightTactiX WEBSITE",
-    "TextBody": new String('From: ' + req.body.name + '.\n\rPhone: ' + req.body.phone + '.\n\rEmail: ' + req.body.email + '.\n\rSubject: ' + req.body.subject + '.\n\rMessage: ' + req.body.message)
+    "TextBody": new String('From: ' + req.body.name + '.\n\rPhone: ' + req.body.phone + '.\n\rEmail: ' + req.body.email + '.\n\rMessage: ' + req.body.comments)
 	}, function(error, success) {
     if(error) {
         res.send("We have had technical difficulties and we regret to say you email hasn't been delivered to Cannon Ridge");
