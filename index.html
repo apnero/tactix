@@ -919,7 +919,7 @@ Saturday</br>Box 'n Burn – 9:00am</br>
 
 	<div class="row">
 
-		<form action="/getFormData" method="post" name="contactform"  id="contactform">
+		<form action="//formspree.io/andrew.nero@gmail.com" method="POST" name="contactform"  id="contactform">
 		<!-- <form action="/getFormData" method="post" class="contact-form" role="form"> -->
 			<fieldset>
 				<div class="six columns">
@@ -1002,18 +1002,18 @@ Saturday</br>Box 'n Burn – 9:00am</br>
 
 
  	    <script>
-            $("form").submit(function(e) {
-                e.preventDefault(); // Prevents the page from refreshing
-                var $this = $(this); // `this` refers to the current form element
-                $.post(
-                    $this.attr("action"), // Gets the URL to sent the post to
-                    $this.serialize(), // Serializes form data in standard format
-                    function(data) { /** code to handle response **/ },
-                    "json" // The format the response should be in
-                );
-                // $('#confirmEmailDialog').modal('toggle')
-                alert("Your message has been sent.  Thank you.");
-            });
+            // $("form").submit(function(e) {
+            //     e.preventDefault(); // Prevents the page from refreshing
+            //     var $this = $(this); // `this` refers to the current form element
+            //     $.post(
+            //         $this.attr("action"), // Gets the URL to sent the post to
+            //         $this.serialize(), // Serializes form data in standard format
+            //         function(data) { /** code to handle response **/ },
+            //         "json" // The format the response should be in
+            //     );
+            //     // $('#confirmEmailDialog').modal('toggle')
+            //     alert("Your message has been sent.  Thank you.");
+            // });
     </script>
 
 
