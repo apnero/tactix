@@ -15,8 +15,8 @@ jQuery(function ($) {
 
         map = new GMaps({
             el: '#gmap',
-            lat: 41.399095, 
-            lng: -73.44344,
+            lat: 41.3923291,
+            lng: -73.4572731,
             scrollwheel:false,
             zoom: 17,
             zoomControl : true,
@@ -26,18 +26,18 @@ jQuery(function ($) {
             overviewMapControl: false,
             clickable: false
         });
-
+        
         var image = '';
         map.addMarker({
-            lat: 41.3985629,
-            lng: -73.44430,
+            lat: 41.3923291,
+            lng: -73.4572731,
             icon: image,
             animation: google.maps.Animation.DROP,
             verticalAlign: 'bottom',
             horizontalAlign: 'center',
             backgroundColor: '#d3cfcf',
              infoWindow: {
-                content: '<div class="map-info"><address>FightTactix<br />190 White Street <br />Danbury</address></div>',
+                content: '<div class="map-info"><address>Fight Tactix<br />47-49 West Street <br />Danbury</address></div>',
                 borderColor: 'red',
             }
         });
