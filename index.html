@@ -1,641 +1,1115 @@
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="desktop ie8 no-js" lang="en-US"><![endif]-->
-<!--[if IE 9 ]><html class="desktop ie9 no-js" lang="en-US"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en-US"><!--<![endif]-->
-   
-	<head>
-		<meta charset="UTF-8" />
-		<title>FightTactix</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- <meta name="format-detection" content="telephone=no" /> -->
+<html lang="en" data-ng-app="website" class="ng-scope">
 
-		<!--[if lt IE 9]>
-		<script type="text/javascript">/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary subline time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
-		<![endif]-->
-		<script type="text/javascript">if(Function('/*@cc_on return document.documentMode===10@*/')()){document.documentElement.className+=' ie10';}</script>
-		<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
-		
-		<!-- <link rel="pingback" href="http://magnum.themes.tf/xmlrpc.php" /> -->
+<head>
+  <!-- /*<style type="text/css">
+    @charset "UTF-8";
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide:not(.ng-hide-animate) {
+      display: none !important;
+    }
 
-		<!-- favicon -->
-		<link rel="shortcut icon" href="shield.png" />
+    ng\:form {
+      display: block;
+    }
+  </style>*/ -->
 
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700,800|Montserrat:400,700|Volkhov:400italic,700italic,400,700&amp;subset=latin,latin-ext">
-		<!-- wp_head() -->
-<!-- 		<link rel="alternate" type="application/rss+xml" title="Magnum &raquo; Feed" href="http://magnum.themes.tf/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Magnum &raquo; Comments Feed" href="http://magnum.themes.tf/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Magnum &raquo; Home 01 &#8211; Fullscreen Video Comments Feed" href="http://magnum.themes.tf/home-01-video/feed/" /> -->
-<link rel='stylesheet' id='pe_theme_compressed-css'  href='css/theme.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='pe_theme_init-css'  href='css/style.css' type='text/css' media='all' />
-<!-- <script type='text/javascript' src='http://items.pixelentity2.netdna-cdn.com/wp-includes/js/comment-reply.min.js?ver=3.8.1'></script> -->
-<script type='text/javascript' src='js/jquery-2.1.4.min.js'></script>
 
-	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-<style type="text/css">body,#contactform input.submit{font-family:'Open Sans';}h1.fittext,h2.fittext,h3.fittext,h4.fittext,h5.fittext,h6.fittext,.bigtext h1,.bigtext h2,.bigtext h3,.bigtext h4,.bigtext h5,.bigtext h6,h1.bigtext,h2.bigtext,h3.bigtext,h4.bigtext,h5.bigtext,h6.bigtext,.fourofour h1{font-family:'Montserrat';}h1.serif,h2.serif,h3.serif,h4.serif,h5.serif,h6.serif,p.serif,.serif h1,.serif h2,.serif h3,.serif h4,.serif h5,.serif h6,.serif p,blockquote,ul.home-menu li em,.portfolio-thumb em,.fourofour em{font-family:'Volkhov';}</style>	</head>
+  <meta charset="utf-8">
+  <title>Fight Tactix</title>
+<link rel="shortcut icon" href="shield.png" />
 
-	<body class="home page page-id-5 page-parent page-template page-template-page_home-php">
 
-		<!-- Preloader -->
-		<div id="preloader">
-			<div id="status">&nbsp;</div>
-		</div>
-		
-					
-					
-<!-- 	<section id="home-01-video" class="home-wrap video playhide">
+  <link rel="canonical" href="http://template55643.motopreview.com/">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	</section>
 
-	
-		<div class="video-container">
-			<a id="video" class="fullscreen-video" data-property="{videoURL:'http://www.youtube.com/watch?v=RdIh8GiVR9I', quality: 'highres',autoPlay:false,mute:false,loop:false}"></a>
-		</div>
 
-		<div class="video-controls">
-			<button class="small-play-btn" onclick="jQuery('#video').playYTP()"><i class="fa fa-play"></i></button>
-			<button class="small-pause-btn" onclick="jQuery('#video').pauseYTP()"><i class="fa fa-pause"></i></button>
-			<button onclick="jQuery('#video').toggleVolume()"><i class="fa fa-volume-up"></i></button>
-		</div>
- 
-	
-	<div style="background-image: url('images/mainpicfinal.png');" class="fullscreen-img"></div>
-		
-		
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/material-design.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    @import url(//fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic|Open+Sans+Condensed:300,300italic,700|PT+Sans:regular,italic,700,700italic|Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic|Roboto+Condensed:300,300italic,regular,italic,700,700italic|Sarina+:regular|Six+Caps:regular&subset=latin,latin-ext,cyrillic,vietnamese,devanagari,cyrillic-ext,greek-ext,greek);
+  </style>
+  <link rel="stylesheet" href="assets/css/theme.css" id="moto-website-style">
 
-<!-- Menu -->
-<div class="main-menu fixedmenu" >
-	
-	<div class="menu-wrap">
 
-		
-		
-			<h1><a href="#home-01-video" class="smoothscroll">FightTactix</a></h1>
 
-		
-		<input type="checkbox" id="toggle" />
-		<label for="toggle" class="toggle"></label>
 
-		<ul class="nav"><li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item smoothscroll active menu-item-59"><a href="#home-01-video">Home</a></li>
-<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page smoothscroll menu-item-63"><a href="#alternate-services">About</a></li>
-<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page smoothscroll menu-item-62"><a href="#featured-work">Instructors</a></li>
-<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page smoothscroll menu-item-61"><a href="#services">Photos</a></li>
-<li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page smoothscroll menu-item-99"><a href="#other-work">Videos</a></li>
-<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page smoothscroll menu-item-60"><a href="#about-me">Schedule</a></li>
-<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page smoothscroll menu-item-60"><a href="#contact">Contact</a></li>
-</ul>
-	</div>
-	
+
+
+
+
+</head>
+
+<body class="moto-background">
+
+
+
+
+
+  <div class="page">
+
+    <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
+      <div data-css-name="moto-container_header_5625f0e6" class="moto-widget moto-widget-container moto-container_header_5625f0e6" data-widget="container" data-container="container" >
+        <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="moto-cell col-sm-12" data-container="container">
+                <div class="moto-widget moto-widget-spacer moto-preset-default                 moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="spacer" data-preset="default" data-spacing="lala">
+                  <div class="moto-widget-spacer-block" style="height: 200px;"></div>
+                </div>
+            
+<!--                 <div data-animation="fadeInDown" class="moto-widget moto-widget-text moto-preset-default                  moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto wow fadeInDown" data-widget="text"
+                data-preset="default" data-spacing="aama" style="visibility: visible; animation-name: fadeInDown;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p style="text-align: center;" class="moto-text_system_2"><a class="moto-link" data-action="pages" data-id="1" href="/">Michelle Cox</a>
+                      <br>
+                    </p>
+                  </div>
+                </div> -->
+        <!--         <div class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto wow fadeInUp" data-preset="default" data-spacing="aaaa" data-widget="image"
+                style="visibility: visible; animation-name: fadeInUp;">
+
+
+                  <div class="moto-widget-image-link">
+                    <img src="assets/image/mt-0179-home-icon1.png" class="moto-widget-image-picture" data-id="85" title="" alt="" draggable="false">
+                  </div>
+
+                </div> -->
+<!--                 <div class="moto-widget moto-widget-menu moto-preset-2 moto-align-center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto wow fadeInUp" data-preset="2" data-widget="menu" data-align="{&quot;desktop&quot;:&quot;center&quot;,&quot;tablet&quot;:&quot;&quot;,&quot;mobile-h&quot;:&quot;&quot;,&quot;mobile-v&quot;:&quot;&quot;}"
+                data-menu-id="1" data-menu-type="horizontal" data-spacing="sama" data-animation="fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+                  <a href="#" class="moto-widget-menu-toggle-btn"><i class="moto-widget-menu-toggle-btn-icon fa fa-bars"></i></a>
+                  <ul class="moto-widget-menu-list moto-widget-menu-list_horizontal">
+                    <li class="moto-widget-menu-item">
+                      <a href="/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-active moto-link">HOME</a>
+                    </li>
+                    <li class="moto-widget-menu-item">
+                      <a href="/about/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">ABOUT</a>
+                    </li>
+                    <li class="moto-widget-menu-item">
+                      <a href="/programs/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-link">PROGRAMS<span class="fa moto-widget-menu-link-arrow"></span></a>
+                      <ul class="moto-widget-menu-sublist">
+                        <li class="moto-widget-menu-item">
+                          <a href="/news/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">NEWS</a>
+                        </li>
+                        <li class="moto-widget-menu-item">
+                          <a href="/about/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-submenu moto-link">ABOUT<span class="fa moto-widget-menu-link-arrow"></span></a>
+                          <ul class="moto-widget-menu-sublist">
+                            <li class="moto-widget-menu-item">
+                              <a href="/testimonials/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-3 moto-link">TESTIMONIALS</a>
+                            </li>
+                          </ul>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li class="moto-widget-menu-item">
+                      <a href="/gallery/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">GALLERY</a>
+                    </li>
+                    <li class="moto-widget-menu-item">
+                      <a href="/contacts/" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">CONTACTS</a>
+                    </li>
+                  </ul>
+                </div> -->
+                <div class="moto-widget moto-widget-spacer moto-preset-default" data-widget="spacer" data-preset="default" data-spacing="">
+                  <div class="moto-widget-spacer-block" style="height: 13px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="section-content" class="content page-1 moto-section" data-widget="section" data-container="section">
+      <!-- <div data-css-name="moto-container_content_5626015b" class="moto-widget moto-widget-container moto-container_content_5626015b" data-widget="container" data-container="container">
+        <div class="moto-widget moto-widget-row" data-widget="row">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="moto-cell col-sm-6" data-container="container">
+                <div data-css-name="moto-container_content_56260252" class="moto-widget moto-widget-container moto-container_content_56260252" data-widget="container" data-container="container">
+                  <div class="moto-widget moto-widget-row" data-widget="row">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="moto-cell col-sm-3" data-container="container"></div>
+                        <div class="moto-cell col-sm-9" data-container="container">
+                          <div class="moto-widget moto-widget-text moto-preset-default                                           moto-spacing-top-medium moto-spacing-right-small moto-spacing-bottom-small moto-spacing-left-small" data-widget="text" data-preset="default"
+                          data-spacing="msss">
+                            <div class="moto-widget-text-content moto-widget-text-editable">
+                              <p class="moto-text_system_3">25 DAYS</p>
+                            </div>
+                          </div>
+                          <div class="moto-widget moto-widget-text moto-preset-default                                        moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-small moto-spacing-left-small" data-widget="text" data-preset="default"
+                          data-spacing="asss">
+                            <div class="moto-widget-text-content moto-widget-text-editable">
+                              <p class="moto-text_system_4">EXPRESS PROGRAM</p>
+                            </div>
+                          </div>
+                          <div class="moto-widget moto-widget-text moto-preset-default                                     moto-spacing-top-small moto-spacing-right-small moto-spacing-bottom-medium moto-spacing-left-small" data-widget="text" data-preset="default"
+                          data-spacing="ssms">
+                            <div class="moto-widget-text-content moto-widget-text-editable">
+                              <p class="moto-text_system_5">100% PERFECT RESULTS
+                                <br>OR MONEY BACK</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="moto-cell col-sm-6" data-container="container">
+                <div data-css-name="moto-container_content_56260288" class="moto-widget moto-widget-container moto-container_content_56260288" data-widget="container" data-container="container">
+                  <div class="moto-widget moto-widget-row" data-widget="row">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="moto-cell col-sm-2" data-container="container"></div>
+                        <div class="moto-cell col-sm-10" data-container="container">
+                          <div class="moto-widget moto-widget-text moto-preset-default                                         moto-spacing-top-medium moto-spacing-right-small moto-spacing-bottom-small moto-spacing-left-small" data-widget="text" data-preset="default"
+                          data-spacing="msss">
+                            <div class="moto-widget-text-content moto-widget-text-editable">
+                              <p class="moto-text_system_3">
+                                <span class="moto-color3_2">NUTRITION</span>
+                                <br>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="moto-widget moto-widget-text moto-preset-default                                      moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-small moto-spacing-left-small" data-widget="text" data-preset="default"
+                          data-spacing="asss">
+                            <div class="moto-widget-text-content moto-widget-text-editable">
+                              <p class="moto-text_system_4">
+                                <span class="moto-color3_2">INDIVIDUAL PROGRAM</span>
+                                <br>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="moto-widget moto-widget-row" data-widget="row">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="moto-cell col-sm-3" data-container="container"></div>
+                                <div class="moto-cell col-sm-9" data-container="container">
+                                  <div class="moto-widget moto-widget-text moto-preset-default                                     moto-spacing-top-small moto-spacing-right-small moto-spacing-bottom-medium moto-spacing-left-small" data-widget="text" data-preset="default"
+                                  data-spacing="ssms">
+                                    <div class="moto-widget-text-content moto-widget-text-editable">
+                                      <p class="moto-text_system_5">
+                                        <span class="moto-color3_2">FREE
+                                          <br>CONSULTATION</span>
+                                        <br>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div data-css-name="moto-container_content_56260706" class="moto-widget moto-widget-container moto-container_content_56260706" data-widget="container" data-container="container">
+          <div data-animation="fadeInDown" class="moto-widget moto-widget-text moto-preset-default                     moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto wow fadeInDown" data-widget="text"
+                data-preset="default" data-spacing="sasa" style="visibility: visible; animation-name: fadeInDown;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p style="text-align: center;" class="moto-text_system_1"><a class="moto-link" data-action="pages" data-id="1" href="/">Israeli Krav Maga</a>
+                      <br>
+                    </p>
+                  </div>
+                </div>
+        <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="moto-cell col-sm-12" data-container="container">
+                <div class="moto-widget moto-widget-spacer moto-preset-default                                    moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="spacer" data-preset="default"
+                data-spacing="masa">
+                  <div class="moto-widget-spacer-block" style="height: 10px;"></div>
+                </div>
+                <div data-animation="fadeInLeft" class="moto-widget moto-widget-text moto-preset-default                               wow fadeInLeft moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text"
+                data-preset="default" data-spacing="aaaa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p style="text-align: center;" class="moto-text_system_4">
+                      <span class="moto-color3_3">AVOID, PREVENT, &amp; DETER VIOLENT CONFRONTATION</span>
+                      <br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+          <div class="container-fluid">
+            <div class="row" style="margin-top: 25px;">
+              <div class="moto-cell col-sm-1" data-container="container"></div>
+              <div class="moto-cell col-sm-10" data-container="container">
+                <div class="moto-widget moto-widget-row" data-widget="row">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="moto-cell col-sm-4" data-container="container"></div>
+                      <div class="moto-cell col-sm-4" data-container="container">
+                        <div data-animation="fadeInLeft" class="moto-widget moto-widget-divider moto-preset-2                                wow fadeInLeft moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
+                        data-widget="divider_horizontal" data-divider-type="horizontal" data-preset="2" data-align="{&quot;desktop&quot;:&quot;left&quot;,&quot;tablet&quot;:&quot;&quot;,&quot;mobile-v&quot;:&quot;&quot;,&quot;mobile-h&quot;:&quot;&quot;}"
+                        data-spacing="sasa" data-width="100" style="visibility: hidden; animation-name: none;">
+                          <hr style="width: 100%;" class="moto-widget-divider-line">
+                        </div>
+                      </div>
+                      <div class="moto-cell col-sm-4" data-container="container"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="moto-cell col-sm-5" data-container="container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="moto-cell col-sm-12" data-container="container">
+                <div data-animation="fadeInLeft" class="moto-widget moto-widget-text moto-preset-default                              wow fadeInLeft moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text"
+                data-preset="default" data-spacing="aasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p style="text-align: center;" class="moto-text_system_3">
+                      <span class="moto-color1_3">TACTICAL AWARENESS</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+          <div class="container-fluid">
+            <div class="row">
+              <!-- <div class="moto-cell col-sm-12" data-container="container">
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                               wow moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text"
+                data-preset="default" data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content2 moto-widget-text-editable">
+                    <p class="moto-text_normal moto-align-center"><strong style="color: #A9A9A9;">Chris Petitti’s Fight TactiX </strong>uses practical applications which can be easily acquired regardless of size and strength. Our training replicates real-life scenarios and environments which teaches students not only to protect themselves against an attacker but helps them physically and mentally prepare for the unexpected. Our training comes directly from Israel, and teaches Krav Maga in the fighting system's most modern evolution. Israeli Krav Maga has been tested and proven to be the most effective defense system on the planet.</p>
+                  </div>
+                </div>
+              </div> -->
+              <div class="moto-cell col-sm-12" data-container="container">
+                <div data-animation="fadeInUp" class="moto-widget  moto-preset-default                               wow moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text"
+                data-preset="default" data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content2 moto-widget-text-editable">
+                    <p class="moto-text_normal2 moto-align-center">Established in 2012, <strong style="color: #A9A9A9;">Chris Petitti’s Fight TactiX</strong> has become the most sought after defense system for civilians, law enforcement and security personnel in the Tri-State area.</p>
+                    <p class="moto-text_normal2 moto-align-center">Petitti combines methodologies from certifications by Nir Mamans CT707, Alain Cohen’s IKF Krav Maga, Haim Gidons IKMA Krav Maga, as well as techniques acquired from his training with additional organizations around the globe. Petitti takes what he has learned from his mentors as well as 15 years of global security operations field experience to bring you Fight TactiX.</p>
+                   
+                  </div>
+                </div>
+              </div>
+        <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+          <div class="container-fluid">
+            <div class="row" style="margin-top: 25px;">
+              <div class="moto-cell col-sm-1" data-container="container"></div>
+              <div class="moto-cell col-sm-10" data-container="container">
+                <div class="moto-widget moto-widget-row" data-widget="row">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="moto-cell col-sm-4" data-container="container"></div>
+                      <div class="moto-cell col-sm-4" data-container="container">
+                        <div data-animation="fadeInLeft" class="moto-widget moto-widget-divider moto-preset-2                                wow fadeInLeft moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="divider_horizontal" data-divider-type="horizontal" data-preset="2" data-align="{&quot;desktop&quot;:&quot;left&quot;,&quot;tablet&quot;:&quot;&quot;,&quot;mobile-v&quot;:&quot;&quot;,&quot;mobile-h&quot;:&quot;&quot;}" data-spacing="sasa" data-width="100" style="visibility: visible;">
+                          <hr style="width: 100%;" class="moto-widget-divider-line">
+                        </div>
+                      </div>
+                      <div class="moto-cell col-sm-4" data-container="container"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="moto-cell col-sm-5" data-container="container"></div>
+            </div>
+          </div>
+        </div>
+                      <div class="moto-cell col-sm-12" data-container="container">
+                <div data-animation="fadeInUp" class="moto-widget  moto-preset-default                               wow moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text"
+                data-preset="default" data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content2 moto-widget-text-editable">
+                   
+                    <p class="moto-text_normal2 moto-align-center" >The three Fight TactiX pillars of survival consist of Fighting Skills, Tactical Methodologies, and The Unknown Variable (X).</p>
+                    <p class="moto-text_normal2 moto-align-center" ><strong>Fighting Skills</strong></p>
+                    <ul>
+                      <li class="moto-text_normal3">Specialized combat proven tactics deployed and refined in the most volatile regions in the world.  Learn what your limits are, control your power, train under pressure, and condition yourself to withstand the duration of a conflict.</li>
+                    </ul>
+                    <p style="margin-top:1.5em;" class="moto-text_normal2 moto-align-center" ><strong>Tactical Methodologies</strong></p>
+                    <ul>
+                      <li class="moto-text_normal3">A systematic approach to avoid, prevent, deter, and deal with all types of violent confrontations.</li>
+                      <li class="moto-text_normal3">Problem solve under stress, mental preparation, tactical awareness, and 3rd person protection considerations.</li>
+                      <li class="moto-text_normal3">Understand what your attacker is trying to achieve.</li>
+                    </ul>
+                    <p style="margin-top:1.5em;" class="moto-text_normal2 moto-align-center" ><strong>X Variable</strong></p>
+                    <ul>
+                      <li class="moto-text_normal3">Understanding the unknown. As humans we have limited reaction time between brain and body (Action vs. Reaction).</li>
+                      <li class="moto-text_normal3">Improve reaction time and heighten instincts to deal with the unknown.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <!--   <div class="moto-cell col-sm-6" data-container="container">
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                              wow moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text"
+                data-preset="default" data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_normal">physically and mentally to prepare for the unexpected. Our training comes directly from Israel and teaches Krav Maga in the fighting system's most modern evolution. Israeli Krav Maga has been tested and proven to be the most effective defense system on the planet.</p>
+                  </div>
+                </div>
+                <div class="moto-widget moto-widget-spacer moto-preset-default                              moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="spacer" data-preset="default" data-spacing="aaaa">
+                  <div class="moto-widget-spacer-block" style="height: 15px;"></div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+              <!-- Modal -->
+<!-- <div class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog biodialog">
+    <div class="modal-header">
+      <a href="#close" class="btn-close" aria-hidden="true">×</a> 
+    </div>
+    <div class="modal-body biodialog-body">
+      <img src="assets/image/chris.jpg" class="img-responsive moto-widget-image-picture" data-id="88" title="" alt="" draggable="false">
+      <h1 class="word" id="modalone_first">From a young age Chris was passionate about sports and athletic player development. Raised in Newtown CT, he was a multi sport athlete. While attending Sacred Heart University he became fascinated with the security and safety field. He continued his education and began extensive training in executive protection and advanced security operations.</h1>
+      <h1 class="word" id="modalone_second">In 2002 he began providing security coverage for many well-known celebrities, as well as corporate executives and former government officials. Chris has had the great opportunity to extensively travel and has provided his services to clients all over the world.</h1>
+      <h1 class="word" id="modalone_third" >Adding to his credentials, Chris is certified through the Israeli Krav Maga Association (Gidon System) as well as Nir Maman’s CT707 Israeli Special Forces Krav Maga. In 2012 he opened his first school to begin teaching Israeli Krav Maga to men and women in CT.</h1>
+
+    </div>
+    <div class="modal-footer">
+      <a id="modalone_button_first" class="wordbtn btn">Next</a>  
+      <a id="modalone_button_second" class="wordbtn btn">Next</a>  
+    </div>
+   </div>
+</div> -->
+
+<div class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog biodialog">
+    <div class="modal-header">
+      <a href="#close" class="btn-close" aria-hidden="true">×</a> 
+    </div>
+    <div class="modal-body biodialog-body">
+      <img src="assets/image/chris.jpg" class="img-responsive moto-widget-image-picture" data-id="88" title="" alt="" draggable="false">
+      <h1 class="word" id="modalone_first">Chris Petitti has been in the security field for the majority of his life. At nineteen he worked for campus security while studying Criminal Justice at Sacred Heart University. Over the next ten years he continued his education and began extensively training in executive protection and advanced security operations. By the age of twenty-nine he was the Corporate director of security for one of the most powerful men on Wall Street.</h1>
+      <h1 class="word" id="modalone_second">For the past ten years Petitti has been involved with executive protection operations for corporate executives, dignitaries, and celebrities around the globe. During his travels, Petitti has had the great opportunity to continue his education in Krav Maga from many of the top practitioners in the world. Adding to his credentials Petitti has been instructor certified through the Israeli Krav Maga Association (Gidon System), Alain Cohen’s Krav Maga Federation, and Nir Mamans CT707 Special Forces Krav Maga.</h1>
+      <h1 class="word" id="modalone_third">Petitti has trained members of US elite military units, Anti-Terrorist Groups, Undercover Officers, Close Protection Agents, Corrections Officers, Air Marshalls and FBI.</h1>
+
+    </div>
+    <div class="modal-footer">
+      <a id="modalone_button_first" class="wordbtn btn">Next</a>  
+      <a id="modalone_button_second" class="wordbtn btn">Next</a>  
+    </div>
+   </div>
+</div>
+<!-- <div class="modal" id="modal-two" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-body training">
+        <h1 class="trainingword" id="t1">Group Training</h1>
+        <p class="trainingword" id="t2">Two hour classes which focus on the mental and physical apsects of Krav Maga self defense. Each class will motivate, test and condition you to have the skills to react quicky and effectively against assault.</p>
+        <br>
+        <h1 class="trainingword" id="t3">Individual Instruction</h1>
+        <p class="trainingword" id="t4">One hour private instruction tailored to your specific skill level and goals. Ask about free group training with purchase of private instruction.</p>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#close" class="btn">Close</a> 
+    </div>
+  </div>
+</div> -->
+
+
+<div class="modal" id="modal-two" aria-hidden="true">
+   <div class="modal-dialog biodialog">
+    <div class="modal-header">
+      <a href="#close" class="btn-close" aria-hidden="true">×</a> 
+    </div>
+    <div class="modal-body biodialog-body">
+      <img src="assets/image/training.jpg" class="img-responsive moto-widget-image-picture" data-id="88" title="" alt="" draggable="false">
+     	<h1 class="trainingword" id="t1">Group Training</h1>
+        <p class="trainingword" id="t2">Two hour classes which focus on the mental and physical apsects of Krav Maga self defense. Each class will motivate, test and condition you to have the skills to react quicky and effectively against assault.</p>
+        <br>
+        <h1 class="trainingword" id="t3">Individual Instruction</h1>
+        <p class="trainingword" id="t4">One hour private instruction tailored to your specific skill level and goals. Ask about free group training with purchase of private instruction.</p>
+       <!-- <p id="modaltwo_button_first" class="trainingbutton" >Next</p>  -->
+      <!-- <p id="modaltwo_button_second" class="trainingbutton"  >Next</p>  -->
+    </div>
+    <div class="modal-footer">
+      <a id="modaltwo_button_first" class="btn wordbtn">Next</a>  
+      <!-- <a id="modaltwo_button_second" href="#close" class="btn">Close</a>   -->
+      <!-- <a id="modalone_button_third" href"#close" class="btn">Close</a>   -->
+      <!-- <a href="#close" class="btn">Close</a>  <!--CHANGED TO "#close"--> 
+    </div>
+   </div>
 </div>
 
-<div id="mainimg">
-	<!-- <img class="img-responsive centered" src="images/mainpicalt.jpg"	 -->
-
-</div>
-
-<section id="alternate-services" class="services" style="padding-bottom:0;background-color:#fff">
-	<div class="row">
-		<div class="twelve columns">
-
-			<!-- The title -->
-			<div class="title">
-				<h4 class="bigtext uppercase letterspace bold">Israeli Krav Maga & Fight Fitness</h4>
-				<hr>
-			</div>
-
-
-
-		</div>
-	</div>
-
-	
-			<div class="row margin">
-
-				
-					
-						
-						<div class="five columns serviceblock">
-
-							 <div class="video">
-	                            <video id="video_krav" height="auto" width="auto" class="video-js vjs-default-skin"
-	                                controls preload="metadata" 
-	                                poster="images/screenshot.png">
-	                        		<source src="images/KravVideo.mp4" type='video/mp4' />	
-	                            </video>
-	                        </div>
-						</div>
-
-					
-						
-						<div class="seven columns serviceblock">
-
-							<div class="service-simple-content"><p><b>Krav Maga</b> is Hebrew for "Contact Combat". This system uses practical applications which can be easily acquired regardless of size and strength and teaches each student not only to protect themselves against an attacker but to help them physically and mentally prepare for the unexpected. This style of training does not require a uniform; we train in casual gym clothes and sneakers. We do our best to replicate real-life scenarios and environments. Our training comes directly from Israel and we teach Krav Maga in the fighting system's most modern evolution. Krav Maga has been tested and proven to be the most effective defense system on the planet. Classes are conducted in a safe and comfortable environment for all fitness and skill levels.</p>
-							</div>
-						
-		
-				
-						</div>
-				</div>
-	
-</section>
-
-<section class="project-page-intro featured-work" id="featured-work" style="padding-bottom:0;background-color:#ffffff">
-
-
-			
-				<div class="project-media project-page-slider" style="margin-bottom:0px;height:720px;">
-					<ul class="bxslider fw-slider">
-
-						
-							<li>
-								<div class="header" style="background-image: url( 'images/chris/chris1.jpg' );">
-
-									<div class="header-center">
-										<div class="centerdiv text-white" style="margin-top:300px;">
-
-											<!-- <h4 class="bigtext uppercase letterspace bold">The Essentials</h4> -->											
-											<h6 class="bigtext serif italic">From a young age Chris was passionate about sports and athletic player development. Raised in Newtown CT he was a multi sport athlete. While attending Sacred Heart University he became fascinated with the security and safety field. He continued his education and began extensive training in executive protection and advanced security operations.</h6>
-										</div>
-									</div>
-
-								</div>
-
-							</li>				
-
-						
-							<li>
-								<div class="header" style="background-image: url( 'images/chris/chris2.jpg' );">
-
-									<div class="header-center">
-										<div class="centerdiv text-white" style="margin-top:300px;">
-
-											<!-- <h4 class="bigtext uppercase letterspace bold">The Essentials</h4> -->											
-											<h6 class="bigtext serif italic">In 2002 he began providing security coverage for many well-known celebrities, as well as corporate executives and former government officials. Chris has had the great opportunity to extensively travel the globe and has provided his services to clients all over the world.</h6>
-										</div>
-									</div>
-
-								</div>
-
-							</li>				
-
-						
-							<li>
-								<div class="header" style="background-image: url( 'images/chris/chris3.jpg' );">
-
-									<div class="header-center">
-										<div class="centerdiv text-white" style="margin-top:300px;">
-
-											<!-- <h4 class="bigtext uppercase letterspace bold">The Essentials</h4> -->											
-											<h6 class="bigtext serif italic">Adding to his credentials, Chris was certified through the Israeli Krav Maga Association (Gidon System) as well as Nir Maman’s CT707 Israeli Special Forces Krav Maga. In 2012 he opened his first school to begin teaching Israeli Krav Maga to men and women in CT.</h6>
-										</div>
-									</div>
-
-								</div>
-
-							</li>				
-
-						
-					</ul>
-				</div>
-
-			
-
-		</section>
-
-
-
-<section id="the-team" class="about-us" style="padding-bottom:40px;background-color:#f0f0f0">
-
-	<div class="row">
-		<div class="twelve columns title">
-			<h1>The Team</h1>
-			<hr>
-		</div>
-	</div>
-
-	
-
-
-	<div class="row margins page-staff-content">
-
-		
-		
-		
-							
-				<div class="three tablet-six medium-six small-twelve columns employeeblock">
-						<div class="hoverimg">
-
-							<img alt="" width="330" height="330" src="images/team/gordon.jpg"/>
-							
-								<div class="mask">
-
-								</div>
-
-							
-						</div>
-						<h4 class="margin-top">Gordon</h4>
-						<!-- <h6 class="serif italic text-light">Founder & CEO</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare sem sit.</p> -->
-					</div><div class="three tablet-six medium-six small-twelve columns employeeblock">
-						<div class="hoverimg">
-
-							<img alt="" width="330" height="330" src="images/team/doug.jpg"/>
-							
-								<div class="mask">
-
-								</div>
-
-							
-						</div>
-						<h4 class="margin-top">Doug</h4>
-						<!-- <h6 class="serif italic text-light">Designer</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare sem sit.</p> -->
-					</div><div class="three tablet-six medium-six small-twelve columns employeeblock">
-						<div class="hoverimg">
-
-							<img alt="" width="330" height="330" src="images/team/chris.jpg"/>
-							
-								<div class="mask">
-
-								</div>
-
-							
-						</div>
-						<h4 class="margin-top">Chris</h4>
-						<!-- <h6 class="serif italic text-light">SEO Expert</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare sem sit.</p> -->
-					</div><div class="three tablet-six medium-six small-twelve columns employeeblock">
-						<div class="hoverimg">
-
-							<img alt="" width="330" height="330" src="images/team/caroline.jpg"/>
-							
-								<div class="mask">
-
-								</div>
-
-							
-						</div>
-						<h4 class="margin-top">Caroline</h4>
-						<!-- <h6 class="serif italic text-light">Illustrator</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare sem sit.</p> -->
-					</div>
-				
-			
-		
-	</div>
-</section>
 
 <!-- 
+<div class="modal" id="modal-three" aria-hidden="true">
+  <div class="modal-dialog">
 
-<section id="about-me" class="about" style="background-color:#fff;padding-top:0px;padding-bottom:50px;">
+    <div class="modal-body training">
+        <h1 class="trainingword" id="s1">Training Schedule</h1>
+        <p class="trainingword" id="s2">Morning and evening classes are offered weekly. Classes are posted on the “Fight TactiX” app and vary each month around Chris’s travel schedule. Morning classes are from 10am-12pm, Evening classes are from 7pm-9pm and Saturday classes are from 1pm-3pm.</p>
+        <br>
+        <a class="trainingword" target="__blank" id="s3" href="http://www.fighttactix.com/team.html">Click Here For The Fight Tactix Scheduling Mobile App</a>
+    </div>
+    <div class="modal-footer">
+      <a href="#close" class="btn">Close</a>  
+    </div>
+  </div>
+</div>
+ -->
+<div class="modal" id="modal-three" aria-hidden="true">
+   <div class="modal-dialog biodialog">
+    <div class="modal-header">
+      <a href="#close" class="btn-close" aria-hidden="true">×</a> 
+    </div>
+    <div class="modal-body biodialog-body">
+      <img src="assets/image/schedule.jpg" class="img-responsive moto-widget-image-picture" data-id="88" title="" alt="" draggable="false">
+		 <h1 class="scheduleword" id="s1">Training Schedule</h1>
+        <p class="scheduleword" id="s2">Morning and evening classes are offered weekly. Classes are posted on the “Fight TactiX” app and vary each month around Chris’s travel schedule. Morning classes are from 10am-12pm, Evening classes are from 7pm-9pm and Saturday classes are from 1pm-3pm.</p>
+<!--         <a style="padding:3em"  class="scheduleword" target="__blank" id="s3" href="http://www.fighttactix.com/team.html">Click Here For The Fight Tactix Scheduling Mobile App</a> -->
+    </div>
+    <div class="modal-footer">
 
-	<div class="row" style="height:190px;">
-		<div class="twelve columns title">
-		<h1>Schedule</h1>
-			<hr>
-		</div>
-	</div>
+<!--         <a id="modalthree_button_first" class="btn wordbtn">Next</a>   -->
+    </div>
+   </div>
+</div>
+
+<div class="modal" id="modal-four" aria-hidden="true">
+<div class="modal-dialog ">
+    <div class="modal-header">
+      <a href="#close" class="btn-close" aria-hidden="true">×</a> 
+    </div>
+      <div class="modal-body contactmodal">
+      <form class="form-style-4" action="//formspree.io/fighttactix@gmail.com" method="POST">
+<h1 class="contactword" id ="pc1"><a href="tel:+1-203-307-5728">(203) 307 5728</a></h1>
+<h1 class="contactword" id ="pc2"><a href="mailto:fighttactix@gmail.com"> FightTactix@Gmail.com</a></h1>
+<label for="field1">
+<span class="contactword" id="c1">Name:</span><input id="c1b" class="contactword" type="text" name="name" required="true" />
+</label>
+<label for="field2">
+<span class="contactword" id="c2">Email:</span><input id="c2b" class="contactword"  type="email" name="email" required="false" />
+</label>
+<label for="field3">
+<span class="contactword" id="c3">Phone:</span><input id="c3b" class="contactword"  type="text" name="phone" required="false" />
+</label>
+<label for="field4">
+<span class="contactword" id="c4">Message:</span><textarea id="c4b" class="contactword"  name="message" onkeyup="adjust_textarea(this)" required="true"></textarea>
+</label>
+
+		<input style="width:100%;" id="modalone_button_send" class="modal-footer btn" type="submit" value="Send">
+       <!-- <p id="modalone_button_send" class="contactbutton" >Send</p>  -->
+
+</form>
+      </div>
+<!--      <div class="modal-footer">
+      <a href="#close" class="btn">Close</a>  
+    </div>  -->
+  </div>
+</div>
 
 
 
-	
-	
-		<img src="images/shield.png" alt="avatar" class="about-avatar">
-
-	
-	<div class="row">
-		<div class="ten columns center margin-bottom">
-
-						<p class="big thin"><p class="big thin">
+  
+</div>
+<!-- /Modal -->
 
 
-Monday</br>10:00am - 12:00pm</br>
-		6:30pm - 8:30pm</br></br>
-
-Wednesday</br>6:30pm - 8:30pm</br></br>
-
-Thursday</br>10:00am - 12:00pm</br>
-
-Saturday</br>10:00am - 12:00pm</br>
+        <div class="moto-widget moto-widget-row row-fixed" style="padding-top: 20px;" data-widget="row">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="moto-cell col-sm-12" data-container="container">
+               <!--  <div class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto wow rotateIn" data-preset="default" data-spacing="aasa" data-widget="image"
+                style="visibility: hidden; animation-name: none;">
 
 
+                  <div class="moto-widget-image-link">
+                    <img src="assets/image/mt-0179-home-icon2.png" class="moto-widget-image-picture" data-id="88" title="" alt="" draggable="false">
+                  </div>
 
-		</div>
-	</div>
-
-	<div class="page-author-content">
-
-		
-	</div>
-</section> -->
-
-<!-- <section class="about" id="ladies-night" style="background-color:#fff;padding-bottom:50px;">
-
-	<div class="row">
-		<div class="ten columns center margin-bottom">
-
-			<div class="title">
-				<h1>Ladies Night</h1>
-				<hr>
-			</div>
-
-		</div>
-	</div>
-
-
-						
-	<div class="row">
-
-			<div class="ten columns center margin-bottom">
-				 <div class="poster">
-              		<img src="images/ladiesnight.jpg"
+                </div> -->
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                            wow fadeInUp moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text"
+                data-preset="default" data-spacing="aasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p style="text-align: center;" class="moto-text_system_6">CONTACT CHRIS AT:
+                      <br>
+                    </p>
+                  </div>
                 </div>
-                <div>
-				<a href='https://kravmagact.sites.zenplanner.com/sign-up-now.cfm' target='_blank' class='button'>Register For Ladies Night</a>
-				</div>
-			</div>
-	</div>
-		
-	
-</section> -->
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                    wow fadeInUp moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-widget="text"
+                data-preset="default" data-spacing="aama" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p style="text-align: center;" class="moto-text_system_3">
+                      <a href="tel:+1-203-307-5728"><span class="moto-color3_3">(203)</span> 307 5728</a>
+                     </p>
+                     <p style="font-size: 35px;text-align: center;" class="moto-text_system_3">
+                      <a href="mailto:fighttactix@gmail.com"><span class="moto-color3_3">FightTactiX </span> @gmail.com</a>
+                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-css-name="moto-container_content_56261031" class="moto-widget moto-widget-container moto-container_content_56261031" data-widget="container" data-container="container">
+        <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="moto-cell col-sm-4" style="padding-top: 20px;" data-container="container">
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                    wow fadeInUp moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default"
+                data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_system_5">
+                      <span class="moto-color2_5">BIO
+                        <!-- <br>GETTING STARTED -->
+                        </span>
+                      <br>
+                    </p>
+                  </div>
+                </div>
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                     wow moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text"
+                data-preset="default" data-spacing="aasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_normal">From a young age Chris was passionate about sports and athletic ...</p>
+                  </div>
+                </div>
+                <div class="moto-widget moto-widget-button moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto wow fadeInUp" data-widget="button" data-preset="3" data-spacing="aama"
+                style="visibility: hidden; animation-name: none;">
 
 
-
-<section id="services" class="services" style="background-color:#f0f0f0">
-	<div class="row">
-		<div class="twelve columns">
-
-			<!-- The title -->
-			<div class="title">
-				<h1>Images</h1>
-				<hr>
-			</div>
-
-		
-			<!-- Slider controls -->
-			<!-- <h2 class="text-color">How may I help you today?</h2>		 -->	<p>
-				<a class="services-prev" href="javascript:void(0)"><i class="fa fa-chevron-left icon arrow-next outline color attached"></i></a>
-				<a class="services-next" href="javascript:void(0)"><i class="fa fa-chevron-right icon arrow-prev outline color attached"></i></a>
-			</p>
-
-		
-
-		</div>
-	</div>
-
-	
-		
-	
-	
-		
-			<!-- Services slider -->
-			<div class="row">
-				<div class="list_carousel">
-					<ul class="services-slider">
-
-						
-								<!-- Service 1 -->
-							<li class="service-item">
-								<img alt="" width="720" height="462" src="images/news/1.jpg"/>
-							</li>		
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/2.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/3.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/4.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/5.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/6.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/7.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/8.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/9.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/10.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/12.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/13.jpg"/>			
-							</li>
-							<li class="service-item">
-									<img alt="" width="720" height="462" src="images/news/14.jpg"/>			
-							</li>							
-							
-						
-					</ul>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-
-		
-	
-</section>
+                  <a href="#modal-one" data-action="page" id="modalone" class="moto-widget-button-link moto-size-medium moto-link" data-anchor="" data-size="medium">
+                    <span class="fa moto-widget-theme-icon"></span>
+                    <span class="moto-widget-button-label">READ MORE</span>
+                  </a>
+                </div>
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                    wow fadeInUp moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text"
+                data-preset="default" data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_system_5">
+                      <span class="moto-color2_5">TRAINING OPTIONS
+                        </span>
+                      <br>
+                    </p>
+                  </div>
+                </div>
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                   wow moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text" data-preset="default"
+                data-spacing="aasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_normal">Group training and individual instruction ...
+                    </p>
+                  </div>
+                </div>
+                <div class="moto-widget moto-widget-button moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto wow fadeInUp" data-widget="button" data-preset="3" data-spacing="aama"
+                style="visibility: hidden; animation-name: none;">
 
 
-<section class="more-work center" id="other-work" style="background-color:#fff">
+                  <a href="#modal-two" data-action="page" id="modaltwo" class="moto-widget-button-link moto-size-medium moto-link" data-anchor="" data-size="medium">
+                    <span class="fa moto-widget-theme-icon"></span>
+                    <span class="moto-widget-button-label">READ MORE</span>
+                  </a>
+                </div>
+              </div>
+              <div class="moto-cell col-sm-4" data-container="container"></div>
+              <div class="moto-cell col-sm-4" style="padding-top: 20px;" data-container="container">
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                    wow fadeInUp moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default"
+                data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_system_5">
+                      <span class="moto-color2_5">SCHEDULE</span>
+                      <br>
+                    </p>
+                  </div>
+                </div>
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                   wow moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text" data-preset="default"
+                data-spacing="aasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_normal">Morning and evening classes are offered weekly. Classes are ...<!-- posted on the “Fight TactiX” app and vary each month around Chris’s travel schedule. Morning classes are from 10am-12pm, Evening classes are from 7pm-9pm and Saturday classes are from 1pm-3pm. -->
+                      <br>
+                    </p>
+                  </div>
+                </div>
+                <div class="moto-widget moto-widget-button moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto wow fadeInUp" data-widget="button" data-preset="3" data-spacing="aama"
+                style="visibility: hidden; animation-name: none;">
 
-	<div class="row">
-		<div class="ten columns center margin-bottom">
 
-			<!-- The title -->
-			<div class="title">
-				<h1>Video</h1>
-				<hr>
-			</div>
+                  <a href="#modal-three" id="modalthree" data-action="page" class="moto-widget-button-link moto-size-medium moto-link" data-anchor="" data-size="medium">
+                    <span class="fa moto-widget-theme-icon"></span>
+                    <span class="moto-widget-button-label">READ MORE</span>
+                  </a>
+                </div>
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                    wow fadeInUp moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text"
+                data-preset="default" data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_system_5">
+                      <span class="moto-color2_5">CONTACT CHRIS
+                        </span>
+                    </p>
+                  </div>
+                </div>
+                <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                   wow moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto fadeInUp" data-widget="text" data-preset="default"
+                data-spacing="aasa" style="visibility: hidden; animation-name: none;">
+                  <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="moto-text_normal">Get more information about Fight Tactix &amp; register for a free trial class ...
+                      <br>
+                    </p>
+                  </div>
+                </div>
+                <div class="moto-widget moto-widget-button moto-preset-3 moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto wow fadeInUp" data-widget="button" data-preset="3" data-spacing="aama"
+                style="visibility: hidden; animation-name: none;">
 
-		</div>
-	</div>
 
-						
-	<div class="six columns medium-six columns small-twelve columns fade-it portfolio-thumb dolightbox single-image">
+                  <a href="#modal-four" data-action="page" id="modalfour" class="moto-widget-button-link moto-size-medium moto-link" data-anchor="" data-size="medium">
+                    <span class="fa moto-widget-theme-icon"></span>
+                    <span class="moto-widget-button-label">READ MORE</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--   <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="moto-cell col-sm-12" data-container="container">
+              <div class="moto-widget moto-widget-spacer moto-preset-default                                 moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="spacer" data-preset="default" data-spacing="saaa">
+                <div class="moto-widget-spacer-block" style="height: 13px;"></div>
+              </div> -->
+            <!--   <div class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto wow rotateIn" data-preset="default" data-spacing="aasa" data-widget="image"
+              style="visibility: hidden; animation-name: none;">
 
-			
-					
-						 <h3>Bear Hug Defense</h3>
-						 <br>
-						 <div class="video">
-                            <video id="video_bearhug" height="auto" width="auto" class="video-js vjs-default-skin"
-                                controls preload="metadata" 
-                                poster="images/bearscreenshot.png">
-                        		<source src="images/bearhug.mp4" type='video/mp4' />	
-                            </video>
+
+                <div class="moto-widget-image-link">
+                  <img src="assets/image/mt-0179-home-icon3.png" class="moto-widget-image-picture" data-id="92" title="" alt="" draggable="false">
+                </div>
+
+              </div> -->
+          <!--     <div data-animation="fadeInUp" class="moto-widget moto-widget-text moto-preset-default                     wow fadeInUp moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default"
+              data-spacing="sasa" style="visibility: hidden; animation-name: none;">
+                <div class="moto-widget-text-content moto-widget-text-editable">
+                  <p style="text-align: center;" class="moto-text_system_4">
+                    <span class="moto-color1_3">TESTIMONIALS</span>
+                    <br>
+                  </p>
+                </div>
+              </div> -->
+       <!--        <div class="moto-widget moto-widget-spacer moto-preset-default" data-widget="spacer" data-preset="default" data-spacing="">
+                <div class="moto-widget-spacer-block" style="height: 16px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+<!--       <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="moto-cell col-sm-12" data-container="container">
+              <div class="moto-widget moto-widget-slider moto-widget-carousel moto-preset-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto wow fadeInUp" data-widget="carousel" data-preset="2" data-spacing="aala"
+              style="visibility: hidden; animation-name: none;">
+
+
+                <div class="loading-block">
+                  <div class="loading-circle">
+                    <div></div>
+                  </div>
+                  <div class="loading-circle">
+                    <div></div>
+                  </div>
+                  <div class="loading-circle">
+                    <div></div>
+                  </div>
+                  <div class="loading-circle">
+                    <div></div>
+                  </div>
+                </div>
+                <div class="carousel-block">
+                  <div class="bx-wrapper" style="max-width: 1260px;">
+                    <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 401px;">
+                      <div class="moto-widget-carousel-list" data-moto-carousel-options="{&quot;itemsCount&quot;:4,&quot;slideshowEnabled&quot;:false,&quot;slideshowDelay&quot;:5,&quot;showNextPrev&quot;:false,&quot;showPaginationDots&quot;:false,&quot;slideWidth&quot;:300,&quot;minSlides&quot;:4,&quot;maxSlides&quot;:4,&quot;moveSlides&quot;:1,&quot;margins&quot;:20}"
+                      style="width: 8215%; position: relative; transition-duration: 0s; transform: translate3d(-1190px, 0px, 0px);">
+
+                        <div class="moto-widget-carousel-item bx-clone" style="height: 401px; float: left; list-style: none; position: relative; width: 277.5px; margin-right: 20px;" aria-hidden="true">
+                          <a class="moto-widget-carousel-link moto-link">
+                            <img src="assets/image/mt-0179-home-testimonials-img2.png" alt="mt-0179-home-testimonials-img2.png">
+                          </a>
+                          <div class="moto-widget-carousel-caption moto-widget-text">
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_normal" style="text-align: center;">
+                              <span class="moto-color2_5">"</span> Michelle competently picked up a programme for training, and consulted about diet, raised morale.
+                              <span class="moto-color2_5">"</span>
+                            </p>
+
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_system_7" style="text-align: center;">JAMES SMITH
+                              <br> (CLIENT)
+                            </p>
+                          </div>
+                        </div>
+                        <div class="moto-widget-carousel-item bx-clone" style="height: 401px; float: left; list-style: none; position: relative; width: 277.5px; margin-right: 20px;" aria-hidden="true">
+                          <a class="moto-widget-carousel-link moto-link">
+                            <img src="assets/image/mt-0179-home-testimonials-img1.png" alt="mt-0179-home-testimonials-img1.png">
+                          </a>
+                          <div class="moto-widget-carousel-caption moto-widget-text">
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_normal" style="text-align: center;">
+                              <span class="moto-color2_5">"</span> Michelle Cox is the best trainer! Attentive and experienced! &nbsp;I advise you to train with her.
+                              <span class="moto-color2_5">"</span>
+                            </p>
+
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_system_7" style="text-align: center;">RITA NELSON
+                              <br> (CLIENT)
+                            </p>
+
+                            <p style="text-align: center;">&nbsp;</p>
+                          </div>
+                        </div>
+                        <div class="moto-widget-carousel-item bx-clone" style="height: 401px; float: left; list-style: none; position: relative; width: 277.5px; margin-right: 20px;" aria-hidden="true">
+                          <a class="moto-widget-carousel-link moto-link">
+                            <img src="assets/image/mt-0179-home-testimonials-img4.png" alt="mt-0179-home-testimonials-img4.png">
+                          </a>
+                          <div class="moto-widget-carousel-caption moto-widget-text">
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_normal" style="text-align: center;">
+                              <span class="moto-color2_5">"</span> Michelle captivates by her sincerity. She easily helped me to overcome my problems with weight.
+                              <span class="moto-color2_5">"</span>
+                            </p>
+
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_system_7" style="text-align: center;">JANE FORD
+                              <br> (CLIENT)
+                            </p>
+                          </div>
+                        </div>
+                        <div class="moto-widget-carousel-item bx-clone" style="height: 401px; float: left; list-style: none; position: relative; width: 277.5px; margin-right: 20px;" aria-hidden="true">
+                          <a class="moto-widget-carousel-link moto-link">
+                            <img src="assets/image/mt-0179-home-testimonials-img3.png" alt="mt-0179-home-testimonials-img3.png">
+                          </a>
+                          <div class="moto-widget-carousel-caption moto-widget-text">
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_normal" style="text-align: center;">
+                              <span class="moto-color2_5">"</span> This is a cheerful girl, &nbsp;who has not only made a specific physical form, but also competently teach all comers.
+                              <span class="moto-color2_5">"</span>
+                            </p>
+
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p class="moto-text_system_7" style="text-align: center;">TAMARA COX
+                              <br> (CLIENT)
+                            </p>
+                          </div>
                         </div>
 
 
-				
-	</div>
+                      </div>
+                    </div>
+                    <!-- <div class="bx-controls bx-has-controls-direction">
+                      <div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div>
+                    </div> -->
+                  </div>
+                </div>
 
-				
-	<div class="six columns medium-six columns small-twelve columns fade-it portfolio-thumb  single-gallery">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+<!--       <div class="moto-widget moto-widget-row" data-widget="row">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="moto-cell col-sm-12" data-container="container">
+              <div class="moto-widget moto-widget-spacer moto-preset-default                moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="spacer" data-preset="default" data-spacing="saaa">
+                <div class="moto-widget-spacer-block" style="height: 10px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+  </div>
 
-			
-					
-					
-					
-						<h3>Defense Against Choke</h3>
-						 <br>
-						 <div class="video">
-                            <video id="video_choke" height="auto" width="auto" class="video-js vjs-default-skin"
-                                controls preload="metadata" 
-                                poster="images/chokescreenshot.png">
-                        		<source src="images/choke.mp4" type='video/mp4' />	
-                            </video>
-                        </div>
-
-			
-	</div>
-		
-	
-</section>
-
-<section id="the-team2" class="about-us" style="background-color:#fff;margin-bottom:0px;padding-bottom:80px;padding-top:0;">
-
-
-
-	
-		<div style="background-image: url('images/logo.jpg');margin-bottom:0;" class="header bottom">
-
-		</div>
-
-	
-</section>
-
-<!-- Contact -->
-<section id="contact" class="contact" style="background-color:#fff;padding-top:0;padding-bottom:40px;">
-	<div class="row">
-	<div class="ten columns center">
-
-			<div class="title">
-				<h1>Get in touch with FightTactix</h1>
-				<hr>
-			</div>
-
-			
-				<p class="medium thin"> For more info or to message FightTactix <a href="mailto:fighttactix@gmail.com">click here</a> or fill out the form below.
-			 
-			
-		</div>
-	</div>
-
-	<div class="row">
-
-		<div class="twelve columns">
-			<div id="message">
-
-				<div id="contactFormSent" class="formSent hide">
-					<strong>Yay!</strong> Message sent.				</div><br>
-
-				<!--alert error-->
-				<div id="contactFormError" class="formError error_message hide">
-					<strong>Error!</strong> Please validate your fields.				</div><br>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="row">
-
-		<form action="//formspree.io/fighttactix@gmail.com" method="POST" name="contactform"  id="contactform">
-		<!-- <form action="/getFormData" method="post" class="contact-form" role="form"> -->
-			<fieldset>
-				<div class="six columns">
-
-					<label for="name" accesskey="U"><i class="fa fa-user"></i></label>
-					<input name="name" type="text" id="name" size="30" value="" />
-
-					<label for="email" accesskey="E"><i class="fa fa-envelope-o"></i></label>
-					<input name="email" type="text" id="email" size="30" value="" />
-
-					<label for="phone" accesskey="P"><i class="fa fa-phone"></i></label>
-					<input name="phone" type="text" id="phone" size="30" value="" />
-
-				</div>
-				<div class="six columns">
-
-					<label for="comments" accesskey="C"><i class="fa fa-comment"></i></label>
-					<textarea name="comments" id="comments"></textarea>
-
-				</div>
-				<div class="twelve columns">
-
-					<input type="submit" class="submit" id="submit" value="Send message" />
-
-				</div>
-			</fieldset>
-		</form>
-	</div>
-</section>
-
-
-
-	<!-- The footer -->
-	<section class="footer-two">
-
-					<!-- gmap-->
-			<div id="gmap"></div>
-			<!--/#gmap-->
+  <div class="header2">
+	<div class="container">
 		<div class="row">
-			<div class="twelve columns">
-
-
-
-				<!-- Back to top button -->
-				<p><a href="#" class="back-to-top smoothscroll"><i class="fa fa-chevron-up icon arrow-top"></i></a></p>
-
-
-				<!-- Social icons -->
-				<p>
-					<a href="https://twitter.com/cannonridgetc" target="_blank" title="Twitter"><i class="fa fa-twitter icon outline light"></i></a><a href="http://wwww.facebook.com/cannonridgetrainingcenter" target="_blank" title="Facebook"><i class="fa fa-facebook icon outline light"></i></a>			</p>
-				<h3>47-49 West Steet</h3>
-				<h3>Danbury</h3>
-				<h3>203-307-5728</h3>
-				<h3>fighttactix@gmail.com</h3>
-
-				<!-- Credits -->
-<!-- 				<p class="text-light">Magnum™ by <a href="http://themeforest.net/user/bitfade" target="blank" class="underline">bitfade</a><br>— Made with <i class="fa fa-heart text-color"></i> on The Moon —</p> -->
-
+			<div class="grid_6 preffix_3">
+			<div class="brand">
+<!-- 			<p class="moto-text_system_1">
+			Fight Tactix
+			</p> -->
+			<p class="moto-text_system_4">
+			Mobile Application
+			</p>
+			</div>
+			</div>
+			</div>
+			<div class="row">
+			<div class="grid_6 preffix_5">
+			<div class="btn2-wrap">
+			<a class="btn2 material-design-cell12" target="__blank" href='https://geo.itunes.apple.com/us/app/fight-tactix/id1068050083?mt=8'><span>Available on the</span> App Store</a>
+			<a class="btn2 material-design-android11" target="__blank" href='https://play.google.com/store/apps/details?id=com.fighttactix&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><span>Get it on</span> Google play</a>
+			</div>
+			<div class="bg-image1 wow fadeInLeft" data-wow-delay="0.6s"></div>
 			</div>
 		</div>
+	</div>
+</div>
+
+  <footer id="section-footer" class="footer moto-section moto-sticky__bootstrapped" data-widget="section" data-container="section" data-moto-sticky="{mode:'smallHeight', direction:'bottom'}">
+    <div data-css-name="moto-container_footer_56261d0e" class="moto-widget moto-widget-container moto-container_footer_56261d0e" data-widget="container" data-container="container">
+      <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="moto-cell col-sm-12" data-container="container">
+              <div class="moto-widget moto-widget-text moto-preset-default        moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="lasa">
+                <div class="moto-widget-text-content moto-widget-text-editable">
+                  <p style="text-align: center;" class="moto-text_system_1">
+                    <span class="moto-color3_4">Fight TactiX</span>
+                    <br>
+                  </p>
+                </div>
+              </div>
+              <div class="moto-widget moto-widget-text moto-preset-default       moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aala">
+                <div class="moto-widget-text-content moto-widget-text-editable">
+                  <p style="text-align: center;" class="moto-text_system_6">
+                    <span class="moto-color3_4">Located at S.E.T. Gym | <a class="moto-link" data-action="pages" data-id="7" href="/privacy-policy/">47 West Street, Danbury, CT</a></span>
+                    <br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <div class="moto-sticky-pseudo-element" style="display: none; height: 285px; width: 1362px;"></div> -->
 
 
+  <div data-moto-back-to-top-button="" class="moto-back-to-top-button">
+    <a ng-click="toTop($event)" class="moto-back-to-top-button-link">
+      <span class="moto-back-to-top-button-icon"></span>
+    </a>
+  </div>
 
 
-	</section>
+ <script src="assets/js/website.assets.min.js" type="text/javascript" data-cfasync="false"></script>
+<!--     <script type="text/javascript" data-cfasync="false">
+    var websiteConfig = websiteConfig || {};
+    websiteConfig.address = '/';
+    websiteConfig.apiUrl = '/api.php';
+    websiteConfig.preferredLanguage = 'en';
+    websiteConfig.back_to_top_button = {
+      "enabled": true,
+      "topOffset": 300,
+      "animationTime": 500
+    };
+  </script> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js"></script>
+  <script src="assets/js/website.min.js" type="text/javascript" data-cfasync="false"></script>
 
 
-
-							
-
-   <!--  // <script src="js/bootstrap.min.js"></script> -->
-<script type='text/javascript' src='js/theme.min.js'></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  	<script type="text/javascript" src="js/gmaps.js"></script>
-  	<script type="text/javascript" src="js/main.js"></script>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//   $( "#modal-one" ).on('show', function() {
+//     alert( "Handler for .click() called." );
+//   }).on('hide', function() {
+//     alert( "Handler for .click() called." );
+//    });
 
-  ga('create', 'UA-42930410-2', 'auto');
-  ga('send', 'pageview');
+// $(document).on('hide.bs.modal','#modal-one', function () {
+//                 alert('');
+//  //Do stuff here
+// });
+
+// $('#modal-one').on('hidden.bs.modal', function () {
+//   // do something…
+//                   alert('d');
+// })
+
+$( "#modalone" ).click(function() {
+    $('#modalone_first').css( "opacity", "0" );
+    $('#modalone_second').css( "opacity", "0" );
+    $('#modalone_third').css( "opacity", "0" );
+    $('#modalone_button_second').css( "opacity", "0" );
+    $('#modalone_button_first').css( "opacity", "0" );
+
+  $('#modalone_first').delay(1150).velocity('transition.slideUpBigIn');
+  $('#modalone_button_first').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');    
+});
+
+$( "#modalone_button_first" ).click(function() {
+    $('#modalone_first').css( "opacity", "0" );
+    $('#modalone_second').css( "opacity", "0" );
+    $('#modalone_third').css( "opacity", "0" );
+
+  $('#modalone_button_first').css( "visibility", "hidden" ).velocity('transition.slideUpBigOut');
+  $('#modalone_first').velocity('transition.slideUpBigOut');
+
+  $('#modalone_second').delay(1150).velocity('transition.slideUpBigIn');
+  $('#modalone_button_second').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');    
+});
+
+$( "#modalone_button_second" ).click(function() {
+    $('#modalone_first').css( "opacity", "0" );
+    $('#modalone_second').css( "opacity", "0" );
+    $('#modalone_third').css( "opacity", "0" );
+
+    $('#modalone_button_second').css( "visibility", "hidden" ).velocity('transition.slideUpBigOut');
+    $('#modalone_second').velocity('transition.slideUpBigOut');
+
+  $('#modalone_third').delay(1150).velocity('transition.slideUpBigIn');
+  // $('#modalone_button_third').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');    
+});
+
+// $( "#modalone_button_third" ).click(function() {
+//     $('#modalone_first').css( "opacity", "0" );
+//     $('#modalone_second').css( "opacity", "0" );
+//     $('#modalone_third').css( "opacity", "0" );
+
+//     $('#modalone_button_third').css( "visibility", "hidden" ).velocity('transition.slideUpBigOut');
+//     $('#modalone_third').velocity('transition.slideUpBigOut');
+
+//   $('#modalone_first').delay(1150).velocity('transition.slideUpBigIn');
+//   $('#modalone_button_first').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');    
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+$( "#modaltwo" ).click(function() {
+  $('.trainingword').css( "opacity", "0" );
+  $('#modaltwo_button_first').css( "opacity", "0" );
+  // $('#modaltwo_button_second').css( "opacity", "0" );
+
+  $('#t1').delay(1000).velocity('transition.slideUpBigIn');
+  $('#t2').delay(1100).velocity('transition.slideUpBigIn');
+  $('#modaltwo_button_first').css( "visibility", "visible" ).delay(1600).velocity('transition.slideUpBigIn');    
+  // $('#t3').delay(1200).velocity('transition.slideUpBigIn');
+  // $('#t4').delay(1300).velocity('transition.slideUpBigIn');
+});
+
+$( "#modaltwo_button_first" ).click(function() {
+
+
+  $('#modaltwo_button_first').css( "visibility", "hidden" ).velocity('transition.slideUpBigOut');
+  $('#t1').velocity('transition.slideUpBigOut');
+  $('#t2').velocity('transition.slideUpBigOut');
+  // $('#modalone_second').delay(1150).velocity('transition.slideUpBigIn');
+  // $('#modaltwo_button_second').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');  
+
+    $('#t3').delay(1000).velocity('transition.slideUpBigIn');
+	$('#t4').delay(1100).velocity('transition.slideUpBigIn');  
+});
+
+// $( "#modaltwo_button_second" ).click(function() {
+
+//   $('#modaltwo_button_second').css( "visibility", "hidden" ).velocity('transition.slideUpBigOut');
+//     $('#t3').velocity('transition.slideUpBigOut');
+//   $('#t4').velocity('transition.slideUpBigOut');
+//   $('#modaltwo_button_first').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');    
+//     $('#t1').delay(1000).velocity('transition.slideUpBigIn');
+// 	$('#t2').delay(1100).velocity('transition.slideUpBigIn');  
+// });
+
+$( "#modalthree" ).click(function() {
+  $('.scheduleword').css( "opacity", "0" );
+  // $('#modalthree_button_first').css( "opacity", "0" );
+  //$('#modalthree_button_second').css( "opacity", "0" );
+
+  $('#s1').delay(1000).velocity('transition.slideUpBigIn');
+  $('#s2').delay(1100).velocity('transition.slideUpBigIn');
+  // $('#modalthree_button_first').css( "visibility", "visible" ).delay(1600).velocity('transition.slideUpBigIn');    
+});
+
+// $( "#modalthree_button_first" ).click(function() {
+
+
+//   $('#modalthree_button_first').css( "visibility", "hidden" ).velocity('transition.slideUpBigOut');
+//   $('#s1').velocity('transition.slideUpBigOut');
+//   $('#s2').velocity('transition.slideUpBigOut');
+//   // $('#modalone_second').delay(1150).velocity('transition.slideUpBigIn');
+//   //$('#modaltwo_button_second').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');  
+
+//     $('#s3').delay(1000).velocity('transition.slideUpBigIn');
+// });
+
+
+
+// $( "#modalthree" ).click(function() {
+//   $('.scheduleword').css( "opacity", "0" );
+//   $('#s1').delay(1000).velocity('transition.slideUpBigIn');
+//   $('#s2').delay(1100).velocity('transition.slideUpBigIn');
+//   $('#s3').delay(1200).velocity('transition.slideUpBigIn');
+// });
+
+
+$( "#modalfour" ).click(function() {
+  $('.contactword').css( "opacity", "0" );
+  $('#modalone_button_send').css( "opacity", "0" );
+  $('#pc1').delay(1000).velocity('transition.slideUpBigIn');
+  $('#pc2').delay(1100).velocity('transition.slideUpBigIn');
+  $('#c1').delay(1200).velocity('transition.slideUpBigIn');
+    $('#c1b').delay(1200).velocity('transition.slideUpBigIn');
+  $('#c2').delay(1300).velocity('transition.slideUpBigIn');
+      $('#c2b').delay(1300).velocity('transition.slideUpBigIn');
+  $('#c3').delay(1400).velocity('transition.slideUpBigIn');
+      $('#c3b').delay(1400).velocity('transition.slideUpBigIn');
+  $('#c4').delay(1500).velocity('transition.slideUpBigIn');
+      $('#c4b').delay(1500).velocity('transition.slideUpBigIn');
+  $('#modalone_button_send').css( "visibility", "visible" ).delay(2000).velocity('transition.slideUpBigIn');  
+});
+
+
+function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+}
+
+  // .focus(function() {
+  //   alert( "Handler for .click() called." );
+  //   $('.word')
+  //     .velocity('transition.fadeIn');
+  // });
+
 
 </script>
 
 
 </body>
+
 </html>
